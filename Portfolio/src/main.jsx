@@ -1,11 +1,13 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import Landing from "./Components/Landing/Landing.jsx";
-import About from "./Components/About/About.jsx";
-import Contact from "./Components/Contact/Contact.jsx";
+
 import "./index.css";
+
+const About = lazy(() => import("./Components/About/About.jsx"));
+const Contact = lazy(() => import("./Components/Contact/Contact.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -18,11 +20,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Contact />
+          </Suspense>
+        ),
       },
     ],
   },
