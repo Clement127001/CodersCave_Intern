@@ -26,7 +26,7 @@ capabilities and achievements.
 
 ### Landing Page components
 
-- Navbar
+- Navbar (with sidebar)
 - Hero
 - MyWork
 - CTA

@@ -1,5 +1,10 @@
+import Hero from "./Hero";
 const Landing = () => {
-  return <div>Landing Page</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 };
 
 export default Landing;

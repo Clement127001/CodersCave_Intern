@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
-import { links } from "../../utils/constants";
-import { NavLink } from "react-router-dom";
-import ToggleButton from "./ToggleButton";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+import ToggleButton from "./ToggleButton";
+import { links, socialLinks } from "../../utils/constants";
+
 const Sidebar = () => {
   const [nav, setNav] = useState(false);
 
@@ -57,7 +58,7 @@ const Sidebar = () => {
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center bg-[#001524] text-white"
+      className="flex flex-col justify-center items-center bg-[#001524] text-white sm:hidden"
       animate={nav ? "open" : "closed"}
     >
       <motion.div
@@ -65,20 +66,35 @@ const Sidebar = () => {
         variants={variants}
       >
         <motion.ul
-          className=" absolute w-full h-full flex flex-col gap-4 justify-center items-center"
+          className="absolute w-full h-full flex flex-col gap-6 justify-center items-center"
           variants={linksVariants}
         >
           {links.map((item) => (
             <motion.li key={item.id} variants={linkVariant}>
               <NavLink
                 to={item.src}
-                className="font-sans text-2xl"
+                className="font-sans text-3xl "
                 onClick={navLinkClickHandler}
               >
                 {item.to}
               </NavLink>
             </motion.li>
           ))}
+
+          <motion.li className="flex gap-2 mt-4" variants={linkVariant}>
+            {socialLinks.map((item) => (
+              <a href={item.source} key={item.id} target="_blank">
+                <img
+                  width={48}
+                  height={48}
+                  className="object-cover cursor-pointer"
+                  src={item.src}
+                  alt={item.alt}
+                  key={item.alt}
+                />
+              </a>
+            ))}
+          </motion.li>
         </motion.ul>
       </motion.div>
       <ToggleButton setToggle={setNav} />
