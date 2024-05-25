@@ -9,7 +9,7 @@ const Hero = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.5,
-        staggerChildren: 0.3,
+        staggerChildren: 0.4,
       },
     },
   };
@@ -17,16 +17,17 @@ const Hero = () => {
   const item = {
     hidden: {
       opacity: 0,
-      x: -20,
+      x: -10,
     },
     visible: {
       x: 0,
       opacity: 1,
     },
   };
+
   return (
     <motion.div
-      className="w-full font-sans h-[80vh] flex flex-col justify-center items-center text-center px-2"
+      className="w-full font-sans h-[80vh] max-sm:h-[90vh] flex flex-col justify-center items-center text-center px-2"
       animate="visible"
       initial="hidden"
       variants={container}
@@ -39,7 +40,7 @@ const Hero = () => {
       </motion.h1>
 
       <motion.h2
-        className="font-semibold text-[72px]  max-sm:text-[48px]  leading-[84px] max-sm:leading-[56px]"
+        className="font-semibold text-[72px]  max-sm:text-[48px]  leading-[80px] max-sm:leading-[56px] text-white"
         variants={item}
       >
         Freelance UI Desginer
@@ -47,7 +48,7 @@ const Hero = () => {
       </motion.h2>
 
       <motion.p
-        className="max-w-[500px]  text-black opacity-75 max-sm:text-sm mt-2"
+        className="max-w-[500px]  text-white opacity-75 max-sm:text-sm mt-2"
         variants={item}
       >
         I help business grow by crafting amazing web experiences. If you’re
@@ -56,7 +57,7 @@ const Hero = () => {
       </motion.p>
 
       <motion.button
-        className=" bg-gradient-to-r from-secondary to-primary px-6 py-3 rounded-full flex items-center text-white font-semibold text-lg mt-8 gap-4 hover:shadow-xl duration-300 hover:scale-110"
+        className="bg-gradient-to-r from-secondary to-primary px-6 py-3 rounded-full flex items-center text-white font-semibold text-lg mt-8 gap-4 shadow-lg duration-300 "
         variants={item}
       >
         See my work{" "}

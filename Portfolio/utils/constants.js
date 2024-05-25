@@ -36,3 +36,79 @@ export const links = [
     to: "Contact",
   },
 ];
+
+export const projectDetails = [
+  {
+    name: "MovaGPT",
+    description:
+      "A smart recommendation app developed with React, Redux, and Tailwind, featuring integrated ChatGPT for personalized suggestions. It includes robust authentication and authorization, using the real-time IMDb API for dynamic movie data.",
+    skills: ["React", "Redux", "Firebase", "TailwindCSS"],
+    alt: "MovaGPT - a intelligent movie recommender",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/hbmxobmuoqqmwo2n4goh",
+    live: "https://movagpt-e3877.web.app",
+  },
+  {
+    name: "My-youtube",
+    description:
+      "A video streaming platform built with React, React Router, Tailwind, and Redux, optimized using JS techniques like debouncing and caching. Features include live chat, nested comments, concurrent programming, and integration with the YouTube API.",
+    skills: ["React", "Redux", "TailwindCSS"],
+    alt: "My-youtube - an optimised video streaming application",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/utpabifjbpmshbvepeg8",
+    live: "https://662780b975565fc60cd221d1--thunderous-melomakarona-5ff0bb.netlify.app/",
+  },
+  {
+    name: "Zesty-Zing",
+    description:
+      "A food ordering app created with React, React Router DOM, Tailwind CSS, and Redux. It features modern web elements like Shimmer UI, lazy loading, and authentication, working seamlessly with the Swiggy API for real-time data.",
+    skills: ["React", "Redux", "TailwindCSS", "Jest", "React Testing Library"],
+    alt: "Zesty-Zing - modern food order application",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/hzj7jcrmmgwkxexknopj",
+    github:
+      "https://github.com/Clement127001/React_deep_dive/tree/main/03-Intro-to-React-ecosystem",
+  },
+  {
+    name: "HPictures",
+    description:
+      "A media company platform built from scratch, responsible for over 100 successful ads. Involved in all stages from ideation and design to development and deployment, delivering a robust and dynamic application.",
+    skills: ["React", "CSS"],
+    alt: "HPictures - media company",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/kgv4c8268v0txgqn5xvj",
+    live: "https://dapper-souffle-1f1126.netlify.app/",
+  },
+  {
+    name: "Nike",
+    description:
+      "A modern landing page for Nike, developed with React and Tailwind CSS. It includes essential business sections like testimonials and contact forms, providing a professional and sleek user experience.",
+    skills: ["React", "TailwindCSS"],
+    alt: "Nike - modern shopping landing page",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/pboig45uhskzlf5yfsmy",
+    live: "https://64e790eb3995fe38618106aa--dreamy-brigadeiros-fb5fbc.netlify.app/",
+  },
+  {
+    name: "Gericht",
+    description:
+      "A restaurant landing page with a complex and modern design, built using React and CSS. This project involved intricate styling, resulting in an aesthetically pleasing and highly functional website.",
+    skills: ["React", "CSS"],
+    alt: "Gericht - moden restaurant page",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/blhqvje2dyuu8ix1adak",
+    live: "https://64d48e0f8669403b1f4ad098--scintillating-lollipop-2647b0.netlify.app/",
+  },
+  {
+    name: "Hoobank",
+    description:
+      "A stylish bank landing page created with React and Tailwind CSS. The site showcases the bank's unique features and services through a sleek, user-friendly interface designed to engage and inform customers.",
+    skills: ["React", "TailwindCSS", "Vite"],
+    alt: "Hoobank - modern bank landing page",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/euarmv3ks6pw4jgv1pl6",
+    live: "https://647988144f267560ebd57d91--curious-khapse-7a6ad5.netlify.app/",
+  },
+  {
+    name: "GPT3",
+    description:
+      "A landing page dedicated to GPT-3, highlighting its features and related research articles. Developed with React and Tailwind CSS, the design is modern and sleek, emphasizing GPT-3's innovative technology.",
+    skills: ["React", "CSS", "Vite"],
+    alt: "Gpt3 - landing page",
+    src: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/portfolio-projects/mzbyma1uarovczcw6mm1",
+    live: "https://6479902886f3ec616e7b6a6e--tourmaline-bunny-0105b1.netlify.app/",
+  },
+];

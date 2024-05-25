@@ -4,11 +4,11 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="bg-[#001524]">
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 }
 
