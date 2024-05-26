@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="w-full font-sans h-[80vh] max-sm:h-[90vh] flex flex-col justify-center items-center text-center px-2"
+      className="w-full font-sans h-[90vh] max-sm:h-[90vh] flex flex-col justify-center items-center text-center px-2"
       animate="visible"
       initial="hidden"
       variants={container}
@@ -56,7 +56,8 @@ const Hero = () => {
         talk.
       </motion.p>
 
-      <motion.button
+      <motion.a
+        href="#work"
         className="bg-gradient-to-r from-secondary to-primary px-6 py-3 rounded-full flex items-center text-white font-semibold text-lg mt-8 gap-4 shadow-lg duration-300 "
         variants={item}
       >
@@ -64,7 +65,7 @@ const Hero = () => {
         <span>
           <img src={downIcon} width={24} alt="go" className=" animate-bounce" />
         </span>
-      </motion.button>
+      </motion.a>
     </motion.div>
   );
 };
