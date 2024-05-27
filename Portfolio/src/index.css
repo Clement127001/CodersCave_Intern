@@ -3,10 +3,5 @@
 @tailwind components;
 
 html {
-
     scroll-behavior: smooth;
-}
-
-body {
-    background-color: #001524;
 }

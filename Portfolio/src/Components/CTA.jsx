@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 const CTA = () => {
   return (
-    <div className="w-full h-[50vh] flex flex-col items-center justify-center text-center px-4">
+    <div className="w-full h-[50vh] flex flex-col items-center justify-center text-center px-4 ">
       <h3 className="text-white text-[40px] leading-[48px] font-semibold mb-2 max-sm:text-[32px] max-sm:leading-[40px]">
         I’m currently available for freelancing work.
       </h3>
-      <p className="text-white opacity-75 mb-4 max-sm:text-sm max-sm:mb-2">
+      <p className="text-white opacity-75 mb-4 max-sm:text-sm max-sm:mb-2 max-w-[330px]">
         If you ar looking for a designer and developer that likes to get stuff
         done.Let’s talk.
       </p>
