@@ -5,7 +5,10 @@ import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   return (
-    <nav className=" py-4 px-2 max-lg:px-4  flex justify-center max-lg:justify-start max-lg:pt-4">
+    <nav
+      className=" py-4 px-2 max-lg:px-4  flex justify-center max-lg:justify-start max-lg:pt-4"
+      id="nav"
+    >
       <div className="flex justify-between items-center w-[900px] max-lg:w-[85%] ">
         <Link to="/">
           <img src={logo} alt="home" width={32} height={32} />

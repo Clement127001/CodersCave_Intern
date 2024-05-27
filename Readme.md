@@ -34,9 +34,11 @@ appealing, and responsive website that provides an overview of the intern's capa
 - Testimonials
 - Tools
 - CTA
+- Footer
 
 ### Contact Page
 
 - ContactDetails
 - Accordion
 - ContactForm
+- Footer

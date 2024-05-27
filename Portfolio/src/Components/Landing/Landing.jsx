@@ -1,3 +1,4 @@
+import CTA from "../CTA";
 import Hero from "./Hero";
 import MyWork from "./MyWork";
 const Landing = () => {
@@ -5,6 +6,7 @@ const Landing = () => {
     <div>
       <Hero />
       <MyWork />
+      <CTA />
     </div>
   );
 };
