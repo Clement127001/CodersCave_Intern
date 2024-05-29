@@ -5,7 +5,7 @@ const ToggleButton = ({ setToggle }) => {
   };
   return (
     <div
-      className="z-10 fixed top-[12px] -right-3 rounded-full w-[50px] h-[50px] cursor-pointer"
+      className="z-30 fixed top-[12px] -right-3 rounded-full w-[50px] h-[50px] cursor-pointer"
       onClick={toggleClickHandler}
     >
       <svg width="23" height="23" viewBox="0 0 23 23">

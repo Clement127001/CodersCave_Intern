@@ -112,3 +112,110 @@ export const projectDetails = [
     live: "https://6479902886f3ec616e7b6a6e--tourmaline-bunny-0105b1.netlify.app/",
   },
 ];
+
+export const work1 = [
+  {
+    icon: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/icons/f0niuvqladvlvvymmv9h",
+    alt: "time",
+    title: "On time Delivery",
+    desc: "I know time is money so I don’t want to waste yours. Or mine. So I guarantee that I will always deliver what you pay for as promised.",
+  },
+  {
+    icon: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/icons/w8ufjwg6xlrhhhzdixlg",
+    alt: "quality",
+    title: "Quality",
+    desc: "I don’t want to put my name on something subpar so my first concern is always quality. No matter what, you will love the end result.",
+  },
+  {
+    icon: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/icons/iankx3erudiuaflooekt",
+    title: "I can design and build a responsive and accesible website",
+    alt: "goal",
+    desc: "My goal is to build accessible and responsive user interfaces for the web and mobile, while preserving the best practices for proper user experience. ",
+  },
+  {
+    icon: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/icons/pxskjnosaggzlaq4gshx",
+    alt: "mobile",
+    title: "I can design and build a mobile app for mobile IOS and Android",
+    desc: "I recently started designing and coding mobile apps and I love it. It’s a different process compared to traditional website design but I’ve been successful in all projects so far.",
+  },
+  {
+    icon: "https://res.cloudinary.com/dpzqiiwdb/image/upload/f_auto,q_auto/v1/icons/nhhywkhftqpgjitm8gxv",
+    alt: "shop",
+    title: "I can design and build an e-commerce store",
+    desc: "I have extensive knowledge of development on the front-end and back-end so I’m able to deliver a completely functional eCommerce website.",
+  },
+];
+
+export const tabs = [
+  {
+    id: "tools",
+    label: "Tools",
+  },
+  {
+    id: "development",
+    label: "Development",
+  },
+];
+
+export const tools = [
+  {
+    name: "Git",
+    src: "https://img.icons8.com/color/48/git.png",
+  },
+  {
+    name: "Github",
+    src: "https://img.icons8.com/material-rounded/48/github.png",
+  },
+  {
+    name: "Figma",
+    src: "https://img.icons8.com/color/48/figma--v1.png",
+  },
+  {
+    name: "Linux",
+    src: "https://img.icons8.com/color/48/linux--v1.png",
+  },
+];
+
+export const development = [
+  {
+    name: "C++",
+    src: "https://img.icons8.com/color/48/c-plus-plus-logo.png",
+  },
+  {
+    name: "Java",
+    src: "https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png",
+  },
+  { name: "SQL", src: "https://img.icons8.com/color/48/my-sql.png" },
+  {
+    name: "HTML",
+    src: "https://img.icons8.com/color/48/html-5--v1.png",
+  },
+  {
+    name: "CSS",
+    src: "https://img.icons8.com/color/48/css3.png",
+  },
+  {
+    name: "JS",
+    src: "https://img.icons8.com/fluency/48/javascript.png",
+  },
+  {
+    name: "React",
+    src: "https://img.icons8.com/color/48/react-native.png",
+  },
+  {
+    name: "Redux",
+    src: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-redux-an-open-source-javascript-library-for-managing-application-state-logo-color-tal-revivo.png",
+  },
+  {
+    name: "Tailwind",
+    src: "https://img.icons8.com/fluency/48/tailwind_css.png",
+  },
+  {
+    name: "Jest",
+    src: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-jest-can-collect-code-coverage-information-from-entire-projects-logo-color-tal-revivo.png",
+  },
+  {
+    name: "React Testing Library",
+    src: "https://testing-library.com/img/octopus-64x64.png",
+  },
+];

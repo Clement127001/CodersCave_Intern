@@ -31,7 +31,6 @@ appealing, and responsive website that provides an overview of the intern's capa
 
 - Navbar
 - WorkDetails
-- Testimonials
 - Tools
 - CTA
 - Footer

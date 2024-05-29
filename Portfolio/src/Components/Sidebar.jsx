@@ -62,7 +62,7 @@ const Sidebar = () => {
       animate={nav ? "open" : "closed"}
     >
       <motion.div
-        className="z-10 fixed top-0 right-0 bottom-0 w-[400px]  bg-white"
+        className=" z-20 fixed top-0 right-0 bottom-0 w-[400px]  bg-white"
         variants={variants}
       >
         <motion.ul
