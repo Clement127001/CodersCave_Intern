@@ -3,7 +3,7 @@ import { container, item } from "../../../utils/constants";
 const ContactDetails = () => {
   return (
     <motion.div
-      className="h-[50vh] flex w-full flex-col items-center justify-center text-center"
+      className=" flex w-full flex-col items-center justify-center h-[50vh] max-sm:h-[70vh] text-center max-sm:w-[90%]"
       variants={container}
       animate="visible"
       initial="hidden"

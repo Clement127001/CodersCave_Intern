@@ -243,3 +243,34 @@ export const item = {
     opacity: 1,
   },
 };
+
+export const qna = [
+  {
+    id: "qn1",
+    question: "What timezone are you in?",
+    answer:
+      " Delhi, India is in the Indian Standard Time (IST) time zone. IST is UTC+5:30.",
+  },
+  {
+    id: "qn2",
+    question: "Do we make a contract?",
+    answer: "I prefer to keep it informal, but I'm open to discussing further.",
+  },
+  {
+    id: "qn3",
+    question: "How much do you charge for a website?",
+    answer:
+      "Launch Your Online Presence with a Professional Basic Website Starting at Just ₹7,000! 🚀",
+  },
+  {
+    id: "qn4",
+    question: "Do you charge by the hour ?",
+    answer:
+      "I do not charge by the hour. I prefer to eliminate the stress of counting the hours. Instead, I charge a flat fee per project, regardless of duration.",
+  },
+  {
+    id: "qn5",
+    question: "Are you working with a team?",
+    answer: "Currently Offering Individual Expertise for Personalized Service.",
+  },
+];
