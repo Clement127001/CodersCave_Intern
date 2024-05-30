@@ -38,6 +38,6 @@ appealing, and responsive website that provides an overview of the intern's capa
 ### Contact Page
 
 - ContactDetails
-- Accordion
+- QNA
 - ContactForm
 - Footer

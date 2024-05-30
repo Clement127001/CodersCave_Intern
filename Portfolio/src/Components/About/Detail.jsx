@@ -1,31 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { container, item } from "../../../utils/constants";
 
 const Detail = () => {
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.4,
-        staggerChildren: 0.4,
-      },
-    },
-  };
-
-  const item = {
-    hidden: {
-      opacity: 0,
-      x: -10,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-    },
-  };
-
   return (
     <motion.div
       className="h-[50vh] max-sm:h-[60vh]  px-4 text-center flex flex-col items-center justify-center"

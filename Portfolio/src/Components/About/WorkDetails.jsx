@@ -8,7 +8,7 @@ const WorkDetail = () => {
         Work Details
       </h2>
 
-      <div className="flex flex-nowrap overflow-x-scroll gap-10 max-sm:gap-8 h-fit w-full pb-4 snap-x">
+      <div className="flex flex-nowrap overflow-x-scroll gap-10 max-sm:gap-8 h-fit w-full pb-4">
         {work1.map((item) => (
           <WorkCard key={item.title} info={item} />
         ))}

@@ -219,3 +219,27 @@ export const development = [
     src: "https://testing-library.com/img/octopus-64x64.png",
   },
 ];
+
+export const container = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+export const item = {
+  hidden: {
+    opacity: 0,
+    x: -10,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+};

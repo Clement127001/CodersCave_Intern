@@ -1,30 +1,7 @@
 import { motion } from "framer-motion";
+import { container, item } from "../../../utils/constants";
 import downIcon from "../../assets/down.png";
 const Hero = () => {
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.4,
-      },
-    },
-  };
-
-  const item = {
-    hidden: {
-      opacity: 0,
-      x: -10,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-    },
-  };
-
   return (
     <motion.div
       className="w-full font-sans h-[90vh] max-sm:h-[90vh] flex flex-col justify-center items-center text-center px-2"

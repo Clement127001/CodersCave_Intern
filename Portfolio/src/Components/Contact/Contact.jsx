@@ -1,5 +1,15 @@
+import ContactDetails from "./ContactDetails";
+import QNA from "./QNA";
+import ContactForm from "./ContactForm";
+
 const Contact = () => {
-  return <div>Contact Me Page</div>;
+  return (
+    <div>
+      <ContactDetails />
+      <QNA />
+      <ContactForm />
+    </div>
+  );
 };
 
 export default Contact;
