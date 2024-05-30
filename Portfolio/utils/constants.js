@@ -214,10 +214,6 @@ export const development = [
     name: "Jest",
     src: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-jest-can-collect-code-coverage-information-from-entire-projects-logo-color-tal-revivo.png",
   },
-  {
-    name: "React Testing Library",
-    src: "https://testing-library.com/img/octopus-64x64.png",
-  },
 ];
 
 export const container = {
@@ -273,4 +269,10 @@ export const qna = [
     question: "Are you working with a team?",
     answer: "Currently Offering Individual Expertise for Personalized Service.",
   },
+];
+
+export const contactInfo = [
+  { title: "Mail", value: "babiyonclement18@gmail.com" },
+  { title: "Phone", value: "+91 6374914684" },
+  { title: "Adresss", value: "Mayiladuthurai, Tamilnadu" },
 ];

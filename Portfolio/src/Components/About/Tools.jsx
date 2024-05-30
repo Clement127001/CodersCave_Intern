@@ -24,7 +24,7 @@ const ToolsItems = ({ item }) => {
       className="bg-white rounded-xl py-2 px-6 flex flex-col items-center gap-2 w-[80px] h-fit"
     >
       <img src={item.src} alt={item.name} width={56} />
-      <h4 className="font-semibold line-clamp-1">{item.name}</h4>
+      <h4 className="font-semibold line-clamp-1 w-full">{item.name}</h4>
     </motion.div>
   );
 };

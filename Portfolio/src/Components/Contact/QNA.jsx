@@ -12,19 +12,23 @@ const QNA = () => {
     });
   };
   return (
-    <div className="flex flex-col items-center justify-center px-2" layout>
-      <h3 className="mb-6 text-white text-[32px] leading-[40px] font-extralight max-sm:text-[24px] max-sm:leading-[32px]">
-        Before sending me a message, here are some things you should know
+    <div
+      className="flex flex-col items-center justify-center px-2 mb-10"
+      layout
+    >
+      <h3 className="mb-6 text-white text-[32px] leading-[40px] font-extralight max-sm:text-[24px] max-sm:leading-[32px] place-self-start">
+        Before sending me a message, here are some <br />
+        things you should know
       </h3>
 
       <div
-        className="border-2 border-white outline rounded-lg w-[800px] max-sm:w-[90%]"
+        className=" w-[800px] max-sm:w-[90%]"
         onClick={toggleAccordianHandler}
       >
         {qna.map((item) => (
           <div
             key={item.id}
-            className="py-2 px-4  border-b-[#ccc] border-b-2 last:border-none h-fit"
+            className="py-2 px-4  border-b-[#ccc] border-b-[0.5px] last:border-none h-fit"
           >
             <h4
               className={`flex justify-between text-white cursor-pointer pb-2`}

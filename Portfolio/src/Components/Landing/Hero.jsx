@@ -35,7 +35,7 @@ const Hero = () => {
 
       <motion.a
         href="#work"
-        className="bg-gradient-to-r from-secondary to-primary px-6 py-3 rounded-full flex items-center text-white font-semibold text-lg mt-8 gap-4 shadow-lg duration-300 "
+        className="bg-gradient-to-r from-secondary to-primary px-6 py-3 rounded-full flex items-center text-white font-semibold text-lg mt-8 gap-4 shadow-lg duration-300"
         variants={item}
       >
         See my work{" "}
