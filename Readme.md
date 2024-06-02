@@ -57,4 +57,15 @@ with web development technologies.
 
 ### phase 1 -> developing the api for managing all the blogs and users
 
+#### user action:
+
+base url : /api/users
+
+- /login -> login user (unprotected)
+- /register -> register new user (unprotected)
+- /:id -> get user details
+- / -> get all authors
+- /change-avatar -> change avatar of the use profile
+- /edit -> edit user details
+
 ### phase 2 -> developing frontend of the application using react and integrate with the api
