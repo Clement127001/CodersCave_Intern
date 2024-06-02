@@ -41,3 +41,20 @@ appealing, and responsive website that provides an overview of the intern's capa
 - QNA
 - ContactForm
 - Footer
+
+## Task 2 - Blog application (going to ge a full [MERN] stack application )
+
+Create a personal blog website to share your thoughts, experiences, and
+insights on various topics. This website will serve as a platform to
+showcase your writing skills, and it will be an opportunity to experiment
+with web development technologies.
+
+## Features
+
+- Authentication and Authorisation
+- Responsive
+- Ease and sleek UI
+
+### phase 1 -> developing the api for managing all the blogs and users
+
+### phase 2 -> developing frontend of the application using react and integrate with the api

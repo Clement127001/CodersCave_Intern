@@ -21,9 +21,9 @@ const ToolsItems = ({ item }) => {
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.2 }}
       key={item.name}
-      className="bg-white rounded-xl py-2 px-6 flex flex-col items-center gap-2 w-[80px] h-fit"
+      className="bg-white rounded-xl py-2 px-6 flex flex-col items-center gap-2 w-fit h-fit"
     >
-      <img src={item.src} alt={item.name} width={56} />
+      <img src={item.src} alt={item.name} width={24} />
       <h4 className="font-semibold line-clamp-1 w-full">{item.name}</h4>
     </motion.div>
   );
@@ -75,7 +75,7 @@ const Tools = () => {
         variants={container}
         animate="visible"
         initial="hidden"
-        className="flex max-sm:w-[50vh] overflow-scroll mt-8 gap-4 no-scrollbar h-[100px] py-2 cursor-pointer"
+        className="flex max-sm:w-[50vh] overflow-scroll mt-8 gap-4 no-scrollbar h-fit py-2 cursor-pointer"
       >
         {activeTab === "tools"
           ? tools.map((item) => <ToolsItems item={item} />)
