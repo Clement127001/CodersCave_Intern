@@ -138,10 +138,7 @@ const editBlog = async (req, res, next) => {
 
     const blogDetail = await Blog.findById(id);
 
-    //check whether the current login user is owner of that blog
-
     if (blogDetail.createdBy == userId) {
-      console.log("Checking for the files");
       if (!req.files) {
         const updatedBlog = await Blog.findByIdAndUpdate(
           id,
@@ -153,14 +150,11 @@ const editBlog = async (req, res, next) => {
           { new: true }
         );
 
-        console.log("updated blog without thumbnail");
-
         return res.status(200).json({
           blog: updatedBlog,
           message: "Blog updated successfully",
         });
       } else {
-        console.log("New thumbnail found");
         const oldPost = await Blog.findById(id);
 
         try {
@@ -172,16 +166,12 @@ const editBlog = async (req, res, next) => {
           );
           await fs.promises.unlink(filePath);
 
-          console.log("unlinked the old thumbnail");
-
           const thumbnail = req.files.thumbnail;
 
           if (thumbnail.size > 2000000)
             return next(
               new HttpError("Thumbnail size should be less than 2mb", 400)
             );
-
-          console.log("thumbnail passed");
 
           const filename = thumbnail.name;
           const splittedFilename = filename.split(".");
@@ -190,8 +180,6 @@ const editBlog = async (req, res, next) => {
             uuid() +
             "." +
             splittedFilename[splittedFilename.length - 1];
-
-          console.log("New file name : " + newFileName);
 
           thumbnail.mv(
             path.join(__dirname, "..", "uploads", newFileName),
@@ -228,8 +216,37 @@ const editBlog = async (req, res, next) => {
 };
 
 const deleteBlog = async (req, res, next) => {
-  const { id } = req.params;
-  res.send(`Deleted blog with given id : ${id}`);
+  try {
+    const { id } = req.params;
+    const { userId } = req.user;
+
+    if (!id) return next(new HttpError("Post is unavialable", 400));
+
+    const blogDetail = await Blog.findById(id);
+
+    if (blogDetail.createdBy == userId) {
+      const filename = blogDetail?.thumbanil;
+
+      try {
+        const filepath = path.join(__dirname, "..", "uploads", filename);
+
+        await fs.promises.unlink(filepath);
+        await Blog.findByIdAndDelete(id);
+        const user = await User.findById(userId);
+        const userBlogCount = user.posts > 0 ? user.posts - 1 : 0;
+
+        await User.findByIdAndUpdate(userId, { posts: userBlogCount });
+
+        res
+          .status(200)
+          .json({ message: `Blog with ${id} is deleted successfully` });
+      } catch (err) {
+        return next(new HttpError("Error unliking the image"));
+      }
+    }
+  } catch (err) {
+    return next(new HttpError(`Couldn't delete with id ${id}`));
+  }
 };
 
 module.exports = {
