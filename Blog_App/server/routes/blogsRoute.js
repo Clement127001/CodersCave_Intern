@@ -1,6 +1,5 @@
 const { Router } = require("express");
-const authMidlleware = require("../middleware/authMiddleware");
-
+const authMiddleware = require("../middleware/authMiddleware");
 const {
   getSingleBlogs,
   getAllBlogs,
@@ -10,7 +9,6 @@ const {
   editBlog,
   deleteBlog,
 } = require("../controllers/blogsControllers");
-const authMiddleware = require("../middleware/authMiddleware");
 
 const router = Router();
 
