@@ -155,8 +155,40 @@ const changeAvatar = async (req, res, next) => {
   }
 };
 
-const editUserDetails = (req, res, next) => {
-  res.json("Edit user details");
+const editUserDetails = async (req, res, next) => {
+  const { name, email, password, newPassword, confirmNewPassword } = req.body;
+
+  if (!name || !email || !password || !newPassword || !confirmNewPassword)
+    return next(new HttpError("Please fill out all the fields", 422));
+
+  // console.log(email);
+
+  const userWithCurrEmail = await User.findOne({ email: email });
+
+  if (userWithCurrEmail && userWithCurrEmail._id != req.user.userId) {
+    return next(new HttpError("Email already exists", 400));
+  }
+
+  if (newPassword === password)
+    return next(new HttpError("New password is same as the old one", 400));
+
+  if (newPassword !== confirmNewPassword)
+    return next(new HttpError("New password doesn't match"));
+
+  const salt = await genSalt(10);
+  const hashedPassword = await hash(newPassword, salt);
+
+  const newDetails = await User.findByIdAndUpdate(
+    req.user.userId,
+    { name, email, password: hashedPassword },
+    { new: true }
+  );
+
+  res
+    .status(202)
+    .json({ user: newDetails, message: "user details updated successfully" });
+
+  // const userDetail = await User.findById(req.user.userId);
 };
 
 module.exports = {
