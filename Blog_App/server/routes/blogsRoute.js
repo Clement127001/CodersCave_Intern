@@ -1,8 +1,25 @@
 const { Router } = require("express");
+const authMidlleware = require("../middleware/authMiddleware");
+
+const {
+  getSingleBlogs,
+  getAllBlogs,
+  getAllblogOfAuthor,
+  getblogsWithCategory,
+  createBlog,
+  editBlog,
+  deleteBlog,
+} = require("../controllers/blogsControllers");
+const authMiddleware = require("../middleware/authMiddleware");
 
 const router = Router();
-router.get("/", (req, res) => {
-  res.send("This is the blogs route");
-});
+
+router.get("/", getAllBlogs);
+router.get("/:id", getSingleBlogs);
+router.get("/user/:id", getAllblogOfAuthor);
+router.get("/category/:categoryId", getblogsWithCategory);
+router.post("/", authMiddleware, createBlog);
+router.patch("/:id", authMiddleware, editBlog);
+router.delete("/:id", authMiddleware, deleteBlog);
 
 module.exports = router;

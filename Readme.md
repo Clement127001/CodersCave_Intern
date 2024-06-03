@@ -61,11 +61,23 @@ with web development technologies.
 
 base url : /api/users
 
-- /login -> login user (unprotected)
-- /register -> register new user (unprotected)
-- /:id -> get user details
-- / -> get all authors
-- /change-avatar -> change avatar of the use profile
-- /edit -> edit user details
+- POST /login -> login user (unprotected)
+- POST /register -> register new user (unprotected)
+- GET /:id -> get user details (unprotected)
+- GET / -> get all authors (unprotected)
+- POST /change-avatar -> change avatar of the use profile(protected)
+- PATCH /edit -> edit user details (protected)
+
+#### blog action:
+
+base url:/api/blogs
+
+- GET / -> get all blogs(unprotected)
+- GET /:id -> get single blog (unprotected)
+- GET /user/:id -> get blogs of given author (unprotected)
+- GET /category/:categoryId -> get blogs of given category (unprotected)
+- POST / -> create new blog (protected)
+- PATCH /:id -> edit blog (protected)
+- DELETE /:id -> delete given blog (protected)
 
 ### phase 2 -> developing frontend of the application using react and integrate with the api
