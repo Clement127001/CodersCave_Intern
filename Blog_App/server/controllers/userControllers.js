@@ -101,13 +101,19 @@ const changeAvatar = async (req, res, next) => {
 
     const userDetail = await User.findById(req.user.userId);
 
+    //if user avatar is already exists, unlink and add the new image
     if (userDetail.avatar) {
-      fs.unlink(
-        path.join(__dirname + ".." + "uploads", userDetail.avatar),
-        (err) => {
-          if (err) return next(new HttpError(err));
-        }
-      );
+      try {
+        const filePath = path.join(
+          __dirname,
+          "..",
+          "uploads",
+          userDetail.avatar
+        );
+        await fs.promises.unlink(filePath);
+      } catch (err) {
+        return next(new HttpError("Error moving the avatar file", 500));
+      }
     }
 
     const { avatar } = req.files;
