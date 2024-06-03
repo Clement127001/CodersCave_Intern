@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const connectDB = require("./db/connectDB");
+const upload = require("express-fileupload");
 require("dotenv").config();
 
 const app = express();
@@ -12,6 +13,8 @@ const { notFound, errorHandler } = require("./middleware/errorMiddlewares");
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(upload());
+app.use("/uploads", express.static(__dirname + "/uploads"));
 
 //route setup
 app.use("/api/v1/users", userRoute);

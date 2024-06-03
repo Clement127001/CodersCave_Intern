@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const authMiddleware = require("../middleware/authMiddleware");
 
 const {
   loginUser,
@@ -15,7 +16,7 @@ router.post("/login", loginUser);
 router.post("/register", registerUser);
 router.get("/:id", getUserDetails);
 router.get("/", getAtuhors);
-router.post("/change-avatar", changeAvatar);
-router.patch("/edit", editUserDetails);
+router.post("/change-avatar", authMiddleware, changeAvatar);
+router.patch("/edit", authMiddleware, editUserDetails);
 
 module.exports = router;

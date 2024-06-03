@@ -20,7 +20,9 @@ const userSchema = new Schema({
   },
 });
 
-userSchema.methods.createToken = () => {
+//don't use arrow function if you are using this
+
+userSchema.methods.createToken = function () {
   return sign({ userId: this._id, name: this.name }, process.env.JWT_SECRET, {
     expiresIn: "1d",
   });
